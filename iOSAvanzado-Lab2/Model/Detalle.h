@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Detalle : NSObject
+@interface Detalle : UITableViewCell
 
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSString *lastName;

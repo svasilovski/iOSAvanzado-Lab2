@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0E73E92185F34600BDE70C /* Detalle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0E73E82185F34600BDE70C /* Detalle.m */; };
+		7E0E73EC2185F9BF00BDE70C /* Agrupador.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0E73EB2185F9BF00BDE70C /* Agrupador.m */; };
+		7E0E73EF2185FBC300BDE70C /* DatosServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0E73EE2185FBC300BDE70C /* DatosServices.m */; };
+		7E4E22B02186049B002AB4AC /* DatosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4E22AF2186049B002AB4AC /* DatosTableViewController.m */; };
 		7EE291EE2185267F004FA088 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE291ED2185267F004FA088 /* AppDelegate.m */; };
 		7EE291F12185267F004FA088 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE291F02185267F004FA088 /* ViewController.m */; };
 		7EE291F42185267F004FA088 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE291F22185267F004FA088 /* Main.storyboard */; };
@@ -36,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E0E73E72185F34600BDE70C /* Detalle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Detalle.h; sourceTree = "<group>"; };
+		7E0E73E82185F34600BDE70C /* Detalle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Detalle.m; sourceTree = "<group>"; };
+		7E0E73EA2185F9BF00BDE70C /* Agrupador.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Agrupador.h; sourceTree = "<group>"; };
+		7E0E73EB2185F9BF00BDE70C /* Agrupador.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Agrupador.m; sourceTree = "<group>"; };
+		7E0E73ED2185FBC300BDE70C /* DatosServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatosServices.h; sourceTree = "<group>"; };
+		7E0E73EE2185FBC300BDE70C /* DatosServices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatosServices.m; sourceTree = "<group>"; };
+		7E4E22AE2186049B002AB4AC /* DatosTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatosTableViewController.h; sourceTree = "<group>"; };
+		7E4E22AF2186049B002AB4AC /* DatosTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatosTableViewController.m; sourceTree = "<group>"; };
 		7EE291E92185267F004FA088 /* iOSAvanzado-Lab2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOSAvanzado-Lab2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE291EC2185267F004FA088 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7EE291ED2185267F004FA088 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +92,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E0E73E52185F21F00BDE70C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E0E73E72185F34600BDE70C /* Detalle.h */,
+				7E0E73E82185F34600BDE70C /* Detalle.m */,
+				7E0E73EA2185F9BF00BDE70C /* Agrupador.h */,
+				7E0E73EB2185F9BF00BDE70C /* Agrupador.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E0E73E62185F23800BDE70C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7E0E73ED2185FBC300BDE70C /* DatosServices.h */,
+				7E0E73EE2185FBC300BDE70C /* DatosServices.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7E4E22AD21860442002AB4AC /* Tablas */ = {
+			isa = PBXGroup;
+			children = (
+				7E4E22AE2186049B002AB4AC /* DatosTableViewController.h */,
+				7E4E22AF2186049B002AB4AC /* DatosTableViewController.m */,
+			);
+			path = Tablas;
+			sourceTree = "<group>";
+		};
 		7EE291E02185267F004FA088 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +144,9 @@
 		7EE291EB2185267F004FA088 /* iOSAvanzado-Lab2 */ = {
 			isa = PBXGroup;
 			children = (
+				7E0E73E52185F21F00BDE70C /* Model */,
+				7E0E73E62185F23800BDE70C /* Service */,
+				7E4E22AD21860442002AB4AC /* Tablas */,
 				7EE291EC2185267F004FA088 /* AppDelegate.h */,
 				7EE291ED2185267F004FA088 /* AppDelegate.m */,
 				7EE291EF2185267F004FA088 /* ViewController.h */,
@@ -268,7 +312,11 @@
 				7EE291F12185267F004FA088 /* ViewController.m in Sources */,
 				7EE291F72185267F004FA088 /* iOSAvanzado_Lab2.xcdatamodeld in Sources */,
 				7EE291FF21852680004FA088 /* main.m in Sources */,
+				7E0E73EC2185F9BF00BDE70C /* Agrupador.m in Sources */,
+				7E0E73E92185F34600BDE70C /* Detalle.m in Sources */,
+				7E0E73EF2185FBC300BDE70C /* DatosServices.m in Sources */,
 				7EE291EE2185267F004FA088 /* AppDelegate.m in Sources */,
+				7E4E22B02186049B002AB4AC /* DatosTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -48,7 +48,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.selectedDetalle = [self detalleForIndexPath:indexPath];
-    //[self performSegueWithIdentifier:@"goToDetail" sender:self];
+    [self performSegueWithIdentifier:@"goToDetail" sender:self];
 }
 
 - (Detalle *)detalleForIndexPath:(NSIndexPath *)indexPath {

@@ -20,6 +20,25 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    self.ImageView.translatesAutoresizingMaskIntoConstraints=false;
+    [[self.ImageView.widthAnchor constraintEqualToConstant:80] setActive:true];
+    [[self.ImageView.heightAnchor constraintEqualToConstant:80] setActive:true];
+    self.ImageView.layer.cornerRadius = 40;
+    self.ImageView.layer.borderColor = UIColor.blueColor.CGColor;
+    self.ImageView.layer.borderWidth = 1.5;
+    self.ImageView.layer.masksToBounds = false;
+    self.ImageView.clipsToBounds = true;
+    
+    self.titleLabel.translatesAutoresizingMaskIntoConstraints=false;
+    [[self titleLabel] setFont:[UIFont fontWithName:@"System" size:20]];
+    
+    self.DescripionLabel.translatesAutoresizingMaskIntoConstraints=false;
+    self.DescripionLabel.numberOfLines = 3;
+    [[self DescripionLabel] setFont:[UIFont fontWithName:@"System" size:14]];
+    [[self.DescripionLabel.heightAnchor constraintEqualToConstant:100] setActive:true];
+    //[self.DescripionLabel sizeToFit];
+    //self.DescripionLabel.lineBreakMode = NSLineBreakByWordWrapping;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -29,20 +48,6 @@
     [self.ImageView setImage:self.detalle.image];
     [self.titleLabel setText:self.detalle.name];
     [self.DescripionLabel setText:self.detalle.details];
-    
-    self.ImageView.translatesAutoresizingMaskIntoConstraints=false;
-    [[self.ImageView.widthAnchor constraintEqualToConstant:40] setActive:true];
-    [[self.ImageView.heightAnchor constraintEqualToConstant:40] setActive:true];
-    self.imageView.layer.cornerRadius = 10;
-    self.imageView.layer.borderColor = UIColor.blueColor.CGColor;
-    self.imageView.layer.borderWidth = 1.5;
-    
-    self.titleLabel.translatesAutoresizingMaskIntoConstraints=false;
-    [[self titleLabel] setFont:[UIFont fontWithName:@"System" size:20]];
-    
-    self.DescripionLabel.translatesAutoresizingMaskIntoConstraints=false;
-    self.DescripionLabel.numberOfLines = 3;
-    [self.DescripionLabel sizeToFit];
     
 }
 

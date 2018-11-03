@@ -8,6 +8,8 @@
 
 #import "DatosTableViewController.h"
 #import "DatosServices.h"
+#import "DatosTableViewCell.h"
+#import "../View/DetalleViewController.h"
 
 @interface DatosTableViewController ()
 
@@ -37,17 +39,16 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"celda Datos" forIndexPath:indexPath];
     Detalle *detalle = [self detalleForIndexPath:indexPath];
-    cell.textLabel.text = detalle.name;
-    cell.detailTextLabel.text = detalle.description;
-    cell.imageView.image = detalle.image;
     
+    DatosTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"celda Datos" forIndexPath:indexPath];
+    cell.detalle = detalle;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.selectedDetalle = [self detalleForIndexPath:indexPath];
+    
     [self performSegueWithIdentifier:@"goToDetail" sender:self];
 }
 
@@ -62,6 +63,13 @@
 
 - (Agrupador *)agrupadorForSection:(NSInteger)section {
     return self.datos[section];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"goToDetail"]) {
+        DetalleViewController *dvc = (DetalleViewController *)segue.destinationViewController;
+        dvc.detalle = self.selectedDetalle;
+    }
 }
 
 /*

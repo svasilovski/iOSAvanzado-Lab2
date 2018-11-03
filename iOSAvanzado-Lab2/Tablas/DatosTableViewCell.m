@@ -37,8 +37,6 @@
     self.DescripionLabel.numberOfLines = 3;
     [[self DescripionLabel] setFont:[UIFont fontWithName:@"System" size:14]];
     [[self.DescripionLabel.heightAnchor constraintEqualToConstant:100] setActive:true];
-    //[self.DescripionLabel sizeToFit];
-    //self.DescripionLabel.lineBreakMode = NSLineBreakByWordWrapping;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
